@@ -1,0 +1,20 @@
+tumor-growth-coefficient	1.1132
+TRAMETINIB	Tumor-Inhibition-Coefficient	0.06850282913886623
+tumor-growth-coefficient	1.1132
+DABRAFENIB	Tumor-Inhibition-Coefficient	-0.01
+tumor-growth-coefficient	1.1132
+NIVOLUMAB	Tumor-Inhibition-Coefficient	-0.047507173632960475
+tumor-growth-coefficient	1.1132
+PEMBROLIZUMAB	Tumor-Inhibition-Coefficient	-0.10811476482832139
+tumor-growth-coefficient	1.1132
+VEMURAFENIB	Tumor-Inhibition-Coefficient	-0.01
+TRAMETINIB|VEMURAFENIB	Tumor-Inhibition-Coefficient	-0.13788510413215982
+DABRAFENIB|PEMBROLIZUMAB	Tumor-Inhibition-Coefficient	-0.18335116054785403
+NIVOLUMAB|VEMURAFENIB	Tumor-Inhibition-Coefficient	-0.15856740851442153
+TRAMETINIB|DABRAFENIB	Tumor-Inhibition-Coefficient	-0.13788510413215982
+DABRAFENIB|NIVOLUMAB	Tumor-Inhibition-Coefficient	-0.15856740851442153
+TRAMETINIB|NIVOLUMAB	Tumor-Inhibition-Coefficient	-0.021344858957724137
+NIVOLUMAB|PEMBROLIZUMAB	Tumor-Inhibition-Coefficient	-0.09682497000782861
+DABRAFENIB|VEMURAFENIB	Tumor-Inhibition-Coefficient	-0.15600698069472502
+PEMBROLIZUMAB|VEMURAFENIB	Tumor-Inhibition-Coefficient	-0.18335116054785403
+TRAMETINIB|PEMBROLIZUMAB	Tumor-Inhibition-Coefficient	-0.021664866965363985

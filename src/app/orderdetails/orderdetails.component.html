@@ -1,0 +1,89 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-12" >
+    <h3 class="text-center">Order History</h3>
+    <div *ngIf="loading" class="text-center">
+        <div class="spinner-grow text-muted"></div>
+        <div class="spinner-grow text-primary"></div>
+        <div class="spinner-grow text-success"></div>
+        <div class="spinner-grow text-info"></div>
+    </div>
+    <div class="float-right mb-10">
+        <button type="button" class="btn btn-primary" (click)="uploadFile()" title="Upload New Data"><i class="fa fa-cloud-upload" aria-hidden="true"></i></button>
+    </div>
+      
+      <div class="example-header">
+          <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search">
+          </mat-form-field>
+        </div>
+        
+        <div class="data-container mat-elevation-z8" >
+          <mat-table #table [dataSource]="dataSource" matSort>
+
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef style="max-width:5%;"> S.No.</mat-header-cell>
+              <mat-cell *matCellDef="let item; let j = index" style="max-width:5%;">
+                  {{ (j+1) + (myPaginator.pageIndex * myPaginator.pageSize) }}  </mat-cell>
+            </ng-container>
+        
+            <!-- Progress Column -->
+            <ng-container matColumnDef="FileName" >
+              <mat-header-cell *matHeaderCellDef > FileName </mat-header-cell>
+              <mat-cell *matCellDef="let row" >
+                  <span class="mobile-label">FileName:</span>
+                  {{row.UploadedFileName}} 
+              </mat-cell>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="UploadedOn">
+              <mat-header-cell *matHeaderCellDef mat-sort-header > UploadedOn </mat-header-cell>
+              <mat-cell *matCellDef="let row" >
+                  <span class="mobile-label">UploadedOn:</span>
+                {{row.UploadedOn}}
+              </mat-cell>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="Status">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+                <mat-cell *matCellDef="let row" > 
+                    <span class="mobile-label">Status:</span>
+                    {{row.reportStatus}} 
+                </mat-cell>
+              </ng-container>
+        
+            <!-- Color Column -->
+            <ng-container matColumnDef="Report">
+              <mat-header-cell *matHeaderCellDef > Report </mat-header-cell>
+              <mat-cell *matCellDef="let row">
+                  <span class="mobile-label">Report:</span>
+                <div *ngIf="row.Status==1 || row.Status==2">
+                    <button class="btn" (click)="downloadReport(row.OrderId,row.ReportFileName)"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i></button>
+                </div>
+                <div *ngIf="row.Status==0 || row.Status==-1">
+                    <span class="btn" title="Report Not Available">--</span>
+                </div>
+              </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;">
+            </mat-row>
+          </mat-table>
+          <mat-paginator #myPaginator 
+                  [length]="totalDatacount"
+                  [pageSize]="5"
+                  [pageSizeOptions]="[5, 10, 25, 100]">
+          </mat-paginator> 
+        </div>
+      </div>
+  </div>
+</div>
+
+    
+    
+    
+    
+  
+  

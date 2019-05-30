@@ -1,0 +1,16 @@
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #373a3c;
+}
+  .toast-top-center {
+    top: 12px;
+    margin: 0 auto;
+    left: 50%;
+    }
+    .mat-header-cell {
+      font-size: 16px;
+      font-weight: 600;
+  }
+  

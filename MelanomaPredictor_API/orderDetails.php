@@ -1,0 +1,50 @@
+<?php 
+/**
+ * Page to fetch all order details for a given user
+ * @Author : Rajeev Kumar
+ * @Date : 22/05/2019
+ * @LastModified : 22/05/2019
+ * @LastModificationDetails : Added Newly
+ * @LastModifiedBy : Rajeev
+ */
+// required headers
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: POST, GET, PUT, DELETE, OPTIONS");
+header("Access-Control-Max-Age: 3600");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+
+$request = json_decode(file_get_contents("php://input"));
+
+include_once '/opt/lampp/htdocs/MelanomaPredictor_API/config/config.php';
+include_once '/opt/lampp/htdocs/MelanomaPredictor_API/lib/MelonomaPrediction.class.php';
+
+$objMelonomaPrediction=new MelonomaPrediction();
+$function=$request->function;
+if($function=="orderDetails"){
+	$stats_arr=array();
+	$stats_arr["Data"]=array();
+	$stats_arr["Status"]=array();
+	$consumerId=$request->userId;
+	//check is emailId already used or not
+	$dataQuery="SELECT OrderId,ConsumerId,UploadedFileName,UploadedOn,Status,CompletedOn,ReportFileName,
+				(CASE
+					WHEN Status IN (0) THEN 'Report Not Generated'
+					WHEN Status IN (1) THEN 'Report Generated'
+					WHEN Status IN (2) THEN 'Partially Report Generated'
+					WHEN Status IN (-1) THEN 'Process Failed'
+					ELSE '-'
+				END) AS reportStatus FROM OrderDetails WHERE ConsumerId='$consumerId' ORDER BY LastModified DESC";
+	$orderDetails=$objMelonomaPrediction->getTableDetailsByQuery($dataQuery);
+	if(count($orderDetails)>0){
+		array_push($stats_arr["Data"], $orderDetails);
+		array_push($stats_arr["Status"], 1);
+	}else{
+		array_push($stats_arr["Data"], '');
+		array_push($stats_arr["Status"], 2);
+		
+	}
+	
+	echo json_encode($stats_arr);
+	
+}

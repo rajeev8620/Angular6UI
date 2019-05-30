@@ -1,0 +1,6 @@
+@import "AgendaBold.ttf";
+@import "AgendaRegular.ttf";
+@font-face {
+    font-family: "Agenda";
+    src: url("gendaBold.ttf") format("truetype");
+}

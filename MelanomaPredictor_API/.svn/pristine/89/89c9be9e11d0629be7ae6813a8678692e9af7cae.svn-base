@@ -1,0 +1,28 @@
+<?php
+/**
+ * Configuration file/setting for STPM
+ * @Author:  Rajeev Kumar
+ * @Package STPM
+ * @Date :29/10/2014
+ * @LastModified: 12/01/2017
+ * @Modification Details :Added TherapyOptionArray array.
+ * @Modified By : Rajeev
+ */
+session_start();
+error_reporting(0);
+//error_reporting(E_ALL & ~E_DEPRECATED);
+date_default_timezone_set('Asia/Kolkata');
+ini_set('memory_limit', '-1');
+//cs110
+define('DATABASE_HOST_NAME', 'cs209.cwgblr.com');
+define('DATABASE_PASSWORD', 'Y2VsbHdvcmtz');//live
+
+define('DATABASE_NAME', 'MelonomaPredictor');
+define('DATABASE_USER_NAME', 'root'); 
+
+define('DATAUPLOADFOLDER', 'MELANOMA_DATA/');
+
+$defaultDB=mysql_connect(DATABASE_HOST_NAME, DATABASE_USER_NAME, base64_decode(DATABASE_PASSWORD)) or die ("Class ".get_class().": Error while connecting to DB (link)");
+mysql_selectdb(DATABASE_NAME , $defaultDB) or die (print "Class ".get_class()." Error while selecting DB");
+
+?>

@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Agenda;
+    src: url(assets/fonts/AgendaRegular.ttf) format("opentype");
+}
+* {
+    font-family: 'Agenda';
+  }

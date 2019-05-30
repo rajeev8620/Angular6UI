@@ -1,0 +1,92 @@
+/**
+ * Style sheet for mail configuration
+ * @Author : Rajeev Kumar
+ * @Package Dashboard
+ * @Version 1.0 
+ * @Started On: 19/03/2018
+ * @LastModified: 19/03/2018
+ * @Modification Details : Added Newly
+ * Modified by : Rajeev Kumar
+ */
+ 
+body {
+	margin:10px 0px; padding:0px;
+	text-align:center;
+	font-family:Courier, sans-serif,Helvetica, Arial;
+	font-size:12pt;
+}
+
+#mailBody {
+	width:700px;
+	margin:0px auto;
+	text-align:left;
+	padding:0px;
+	border:2px solid #4A8BC2;
+	background-color:#FFFFFF;
+}
+
+.mailheading {
+	width:100%;
+	color : #FFFFFF;
+	font-weight : bold;
+	font-size : 24px;
+	font-family:Courier, sans-serif,Helvetica, Arial;
+	text-align:center;
+	padding:5px 0px;
+	background-color: #4A8BC2;
+}
+.mailContent {
+	border-top: 2px solid  #000000;
+	padding-top: 10px;
+	padding-left: 15px;
+	font-family:Courier, sans-serif,Helvetica, Arial;
+	font-size : 12px;
+	color : #1A0033;
+	margin : 0px;
+	text-align: justify;
+}
+
+.subheading {
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #840084;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: center;
+	font-size:14px;
+}
+
+table {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.warn {
+	padding-top:5px;
+	text-align:center;
+	font-style:italic;
+}
+
+
+.tableFormat{
+    align:center;
+    border-radius:3px;
+    width:95%;
+    font: 13px arial;
+    background-color: #c3b294;
+    margin-top:20px;
+}
+.tableFormat tr:first-child > td{
+    width:25%;
+    border-radius:3px;
+    background-color :#ecffef;
+    padding:8px;
+    font-weight:bold;
+}
+.tableFormat  tr:nth-child(n){
+        background-color :#FFF8DC;
+        padding:8px;
+}
+.tableFormat  td{
+    padding:6px;
+}

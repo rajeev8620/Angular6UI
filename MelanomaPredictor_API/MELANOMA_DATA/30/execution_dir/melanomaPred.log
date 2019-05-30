@@ -1,0 +1,82 @@
+[INFO] -> [2019-05-29 11:31:43] : Processing Order Id  : 30
+[INFO] -> [2019-05-29 11:31:43] : Reading input
+[INFO] -> [2019-05-29 11:31:43] : Unzipping file - Fluxion.zip
+[INFO] -> [2019-05-29 11:31:43] : Number of patient found: 2
+[INFO] -> [2019-05-29 11:31:43] : Dependencies Zip file found. Proceeding with extraction
+[INFO] -> [2019-05-29 11:31:45] : ############ parsing genomics ##############
+[INFO] -> [2019-05-29 11:31:45] : Parsing completed for JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:31:45] : loading pathway object
+[INFO] -> [2019-05-29 11:31:45] : pathway object has been loaded.. Initiating PAS calc
+[INFO] -> [2019-05-29 11:31:45] : running PAS calc for JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:31:45] : sh /data/cw_utils/tools/Moonshot/dependencies/vcf_parser.sh -v /opt/lampp/htdocs/MelonomaPredictor_API/MELANOMA_DATA/30/input/Fluxion/JFDI-0-1_test1.vcf -i 65 -s NORMAL_VEP -a GRCh38 -o  /opt/lampp/htdocs/MelonomaPredictor_API/MELANOMA_DATA/30/execution_dir > /opt/lampp/htdocs/MelonomaPredictor_API/MELANOMA_DATA/30/execution_dir/JFDI-0-1_test1VEP_output.log 2>&1
+[INFO] -> [2019-05-29 11:32:28] : Parsing completed for JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : loading pathway object
+[INFO] -> [2019-05-29 11:32:28] : pathway object has been loaded.. Initiating PAS calc
+[INFO] -> [2019-05-29 11:32:28] : running PAS calc for JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running: TRAMETINIB
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for TRAMETINIB in patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : TRAMETINIB0.0022997539195885076
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for TRAMETINIB in patient: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : TRAMETINIB0.16443710859688082
+[INFO] -> [2019-05-29 11:32:28] : Running: DABRAFENIB
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for DABRAFENIB in patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : DABRAFENIB-0.1829693462604113
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for DABRAFENIB in patient: JFDI-0-1_test1
+[ERROR] -> [2019-05-29 11:32:28] : Skipping drug:", DABRAFENIB, "as specific targets do not exist
+[INFO] -> [2019-05-29 11:32:28] : Running: NIVOLUMAB
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for NIVOLUMAB in patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : NIVOLUMAB-0.07050781973055013
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for NIVOLUMAB in patient: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : NIVOLUMAB-0.06672360889939988
+[INFO] -> [2019-05-29 11:32:28] : Running: PEMBROLIZUMAB
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for PEMBROLIZUMAB in patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : PEMBROLIZUMAB0.18013052601222448
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for PEMBROLIZUMAB in patient: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : PEMBROLIZUMAB-0.10945976484707594
+[INFO] -> [2019-05-29 11:32:28] : Running: VEMURAFENIB
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for VEMURAFENIB in patient: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : VEMURAFENIB-0.06793562941208976
+[INFO] -> [2019-05-29 11:32:28] : Running Patient: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Checking Targets for VEMURAFENIB in patient: JFDI-0-1_test1
+[ERROR] -> [2019-05-29 11:32:28] : Skipping drug:", VEMURAFENIB, "as specific targets do not exist
+[INFO] -> [2019-05-29 11:32:28] : Running:TRAMETINIB|NIVOLUMAB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:TRAMETINIB|NIVOLUMAB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:TRAMETINIB|VEMURAFENIB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:TRAMETINIB|VEMURAFENIB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:DABRAFENIB|PEMBROLIZUMAB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:DABRAFENIB|PEMBROLIZUMAB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:NIVOLUMAB|PEMBROLIZUMAB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:NIVOLUMAB|PEMBROLIZUMAB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:PEMBROLIZUMAB|VEMURAFENIB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:PEMBROLIZUMAB|VEMURAFENIB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:DABRAFENIB|NIVOLUMAB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:DABRAFENIB|NIVOLUMAB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:TRAMETINIB|DABRAFENIB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:TRAMETINIB|DABRAFENIB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:NIVOLUMAB|VEMURAFENIB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:NIVOLUMAB|VEMURAFENIB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:TRAMETINIB|PEMBROLIZUMAB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:TRAMETINIB|PEMBROLIZUMAB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:28] : Running:DABRAFENIB|VEMURAFENIB for: JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:29] : Running:DABRAFENIB|VEMURAFENIB for: JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:29] : Parsing report for pid JFDI-0-1_Variant_Report_test1
+[INFO] -> [2019-05-29 11:32:30] : Parsing report for pid JFDI-0-1_test1
+[INFO] -> [2019-05-29 11:32:31] : Total Files Given As Input : 2
+[INFO] -> [2019-05-29 11:32:31] : Files Processed Successfully : 2
+[INFO] -> [2019-05-29 11:32:31] : Files In Unsupported Format : 0
+[INFO] -> [2019-05-29 11:32:31] : Files Failed To Process : 0
+[INFO] -> [2019-05-29 11:32:31] : UPDATE OrderDetails
+                    SET Status = 1, 
+                    CompletedOn = NOW(),  
+                    ReportFileName = '/opt/lampp/htdocs/MelonomaPredictor_API/MELANOMA_DATA/30/output/30_20190529113231.pdf',  
+                    LastModified = NOW()  
+                    WHERE OrderId = 30

@@ -1,0 +1,44 @@
+<header id="Header">
+  <div class="container-fluid">
+    <nav class="navbar sticky-top navbar-light bg-light cyan-text py-3 main-nav navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="block-sitebranding">
+        <a class="navbar-brand " href="#"><img src="assets/img/logo.png" alt="Logo" style="max-height: 55px;"></a>
+        </div>
+          <div id="navbarSupportedContent" *ngIf="currentUser!=null && currentUser!=''">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link  text-uppercase" title="Logout" (click)="logOutUser()"><button class="btn"><i class="fa fa-power-off fa-2x" ></i></button>
+                </a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+  </div> 
+</header>
+
+<!-- <header id="Header" class="hidden-lg-down"> 
+  <div class="container-fluid"> 
+    <div class="row"> 
+      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3"> 
+        <div id="block-sitebranding"> 
+          <a href="/" title="Home" rel="home"> 
+            <a class="navbar-brand " href="#"><img src="assets/img/logo.png" alt="Logo" style="max-height: 50px;"></a>
+          </a>
+        </div>
+      </div>
+      <div>
+
+      <div id="navbarSupportedContent" *ngIf="currentUser!=null && currentUser!=''">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link  text-uppercase" title="Logout" (click)="logOutUser()"><button class="btn"><i class="fa fa-power-off fa-2x" ></i></button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </header> -->

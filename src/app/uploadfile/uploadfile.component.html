@@ -1,0 +1,104 @@
+<div class="container">
+        <div class="row justify-content-sm-center h-100" style="margin-top:0%;">
+                <div class="card fat" style="min-width: 65%">
+                    <div class="card-body">
+                        <mat-card-content>
+                                <h5 class="text-center">Upload File For Melanoma Prediction</h5>
+                        </mat-card-content>
+                    </div>
+                </div>
+            </div>
+    <div class="row justify-content-sm-center h-100">
+        <div class="card fat" style="min-width: 65%">
+                    <div class="card-body">
+                            
+                        <div class="alert alert-success" role="alert" *ngIf="uploadSuc==1">
+                            {{reportGenerationMessage}}
+                        </div>
+                        <div class="alert alert-danger" role="alert" *ngIf="uploadFail==1">
+                            {{reportGenerationMessage}}
+                        </div>
+                        <div class="alert alert-danger" role="alert" *ngIf="noFileSelected==1">
+                            Kindly select file for upload!
+                        </div>
+                        <form [formGroup]="uploadForm" (ngSubmit)="uploadSubmit()">
+                        <mat-card-content> 
+                                <label for="file-upload" class="custom-file-upload">
+                                        <i class="fa fa-cloud-upload"></i> Select File
+                                    </label>
+                                    <input id="file-upload" formControlName="document" type="file" ng2FileSelect  [uploader]="uploader" multiple/>
+                                    <!-- <input formControlName="document" type="file" ng2FileSelect  [uploader]="uploader" multiple/> -->
+
+                            <!-- <input formControlName="document" type="file" ng2FileSelect  [uploader]="uploader" multiple/><br/> -->
+                            <br>
+                            <!-- <div class="drop-zone">
+                            <div ng2FileDrop [uploader]="uploader" class="drop-zone">
+                            Drag and drop files to upload
+                            </div>
+                            </div> -->
+                            <table>
+                            <tbody>
+                                <tr *ngIf="uploader.queue.length>0">
+                                    <th colspan="2" class="text-center">Selected Files:</th>
+                                </tr>
+                                <tr *ngIf="uploader.queue.length>0">
+                                    <td colspan="2"><hr/></td>
+                                </tr>
+                            <tr *ngFor="let item of uploader.queue">
+                                <th width="90%">
+                                    {{ item?.file?.name }}
+                                </th>
+                                <th class="text-center" width="10%">
+                                    <button class="btn" (click)="item.remove()"><i class="fa fa-trash-o" style="font-size:30px;color:red"></i></button>
+                                </th>
+                            </tr>
+                            <tr *ngIf="loading==1">
+                                <td colspan="2"><span style="color:green">Report is getting generated.......</span></td>
+                            </tr>
+                            <tr *ngIf="loading==1"></tr>
+                            <tr >
+                                <td width="90%">
+                                    <button type="submit" class="btn btn-primary">
+                                        <div *ngIf="loading==1" class="spinner-border spinner-border-sm" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <span *ngIf="loading==1">Please Wait</span>
+                                        <span *ngIf="loading==0">Upload Data</span>
+                                    </button>
+                                </td>
+                                <td width="10%" style="text-align: center" *ngIf="loading==0">
+                                    <button class="btn btn-secondary" (click)="goToOrderHistory()">Cancel</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                         </mat-card-content>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-sm-center h-100" style="margin-top:5%;">
+                <div class="card fat" style="min-width: 65%">
+                    <div class="card-body">
+                        <mat-card-content>
+                            <h5 class="text-center">Sample Files</h5>
+                            <hr/>
+                            <table width="100%">
+                                <tr>
+                                    <td width="50%">
+	                                    <span class="float-right">
+	                                    	<button class="btn" (click)="downloadSampleFile('xls')" title="Download .xls sample file"><i class="fa fa-file-excel-o fa-2x" aria-hidden="true"></i></button>
+	                                    </span>
+                                    </td>
+                                    <td width="50%">
+                                    	<span class="float-left">
+	                                    	<button class="btn" (click)="downloadSampleFile('vcf')" title="Download .vcf sample file"><i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i></button>
+	                                    </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </mat-card-content>
+                    </div>
+                </div>
+            </div>
+        </div>

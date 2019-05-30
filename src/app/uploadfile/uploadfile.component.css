@@ -1,0 +1,60 @@
+#file-label {
+    display: inline-flex;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#file-label mat-icon {
+    font-size: 18px;
+    text-align: center;
+}
+
+#file-label a {
+    cursor: pointer;
+}
+
+.area {
+    width: 77%;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #333;
+    background: rgba(0,0,0,0.7);
+}
+
+#dropZone {
+    border: 2px dashed #bbb;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+    font: 21pt bold arial;
+    color: #bbb;
+}
+
+.drop-file-over{
+  background: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .StickyHeader, .StickyFooter {
+    flex: 0 0 auto;
+  }
+  
+  .StickyContent {
+    flex: 1 1 auto;
+    overflow-y: scroll;
+  }
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
